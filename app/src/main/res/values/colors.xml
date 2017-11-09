@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f17a2f</color>
+    <color name="colorPrimaryDark">#f17b30</color>
+    <color name="colorAccent">#f17b30</color>
+
+    <color name="butterscotch">#faaf3d</color>
+    <color name="charcoalGrey">#2d303c</color>
+    <color name="pinkishGrey">#cccccc</color>
+    <color name="silver">#c9d3d8</color>
+    <color name="coolGrey">#99a5ab</color>
+    <color name="charcoalGrey15">#2c303c</color>
+    <color name="dustyOrange30">#f17a2f</color>
+    <color name="dustyOrange">#f17b30</color>
+    <color name="paleGrey">#F9FAFB</color>
+    <color name="buttonEndGradient">#F9B25E</color>
+    <color name="white">#ffffff</color>
+    <color name="greenOpened">#00B200</color>
+    <color name="redClosed">#cc191b</color>
+
+</resources>

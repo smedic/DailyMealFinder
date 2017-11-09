@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="frag_rest_card_view_corner_radius">5dp</dimen>
+    <dimen name="frag_rest_h_margin">10dp</dimen>
+    <dimen name="frag_rest_small_v_margin">5dp</dimen>
+    <dimen name="frag_rest_medium_v_margin">10dp</dimen>
+    <dimen name="frag_rest_large_v_margin">15dp</dimen>
+    <dimen name="frag_rest_photo_card_view_height">210dp</dimen>
+    <dimen name="frag_rest_map_card_view_height">180dp</dimen>
+    <dimen name="frag_rest_buttons_height">44dp</dimen>
+
+    <dimen name="food_item_height">40dp</dimen>
+</resources>

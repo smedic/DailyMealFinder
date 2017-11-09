@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paleGrey"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/frag_rest_medium_v_margin"
+        android:layout_marginEnd="@dimen/frag_rest_h_margin"
+        android:layout_marginLeft="@dimen/frag_rest_h_margin"
+        android:layout_marginRight="@dimen/frag_rest_h_margin"
+        android:layout_marginStart="@dimen/frag_rest_h_margin"
+        android:layout_marginTop="@dimen/frag_rest_medium_v_margin"
+        android:layout_weight="0.5"
+        cardview:cardCornerRadius="@dimen/frag_rest_card_view_corner_radius">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|bottom">
+
+            <RatingBar
+                android:id="@+id/rating"
+                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/name"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/type"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:maxLines="1"
+                android:shadowColor="@color/charcoalGrey"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/frag_rest_small_v_margin"
+                android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                android:layout_marginStart="@dimen/frag_rest_h_margin"
+                android:maxLines="1"
+                android:shadowColor="@color/charcoalGrey"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/frag_rest_medium_v_margin"
+        android:layout_marginEnd="@dimen/frag_rest_h_margin"
+        android:layout_marginRight="@dimen/frag_rest_h_margin"
+        android:layout_marginTop="@dimen/frag_rest_medium_v_margin"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.18"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/location_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.48"
+                android:background="@drawable/button_selector"
+                android:text="@string/location"
+                android:textAllCaps="true"
+                android:textColor="@drawable/button_text_selector" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04" />
+
+            <Button
+                android:id="@+id/menu_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.48"
+                android:background="@drawable/button_selector"
+                android:text="@string/menu"
+                android:textAllCaps="true"
+                android:textColor="@drawable/button_text_selector" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/frag_rest_small_v_margin"
+            android:layout_weight="0.82">
+
+            <RelativeLayout
+                android:id="@+id/location_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/map_card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.80"
+                        cardview:cardCornerRadius="5dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/map_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:maxLines="1"
+                        android:textColor="@color/charcoalGrey"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10">
+
+                        <TextView
+                            android:id="@+id/open_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="07:00-19:00"
+                            android:textColor="@color/charcoalGrey"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/open_closed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/frag_rest_h_margin"
+                            android:layout_marginStart="@dimen/frag_rest_h_margin"
+                            android:layout_toEndOf="@+id/open_time"
+                            android:layout_toRightOf="@+id/open_time"
+                            android:textAllCaps="true"
+                            android:textColor="@color/charcoalGrey"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/menu_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/food_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/dustyOrange"
+                    android:dividerHeight="1dp" />
+
+                <TextView
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/notification"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
